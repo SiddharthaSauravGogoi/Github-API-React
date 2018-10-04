@@ -1,0 +1,31 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato' , sans-serif;
+  background-color: #FBFBF2;
+}
+
+.App {
+  background-color: rgb(37, 37, 196);
+  width: 400px;
+  margin: 10px auto;
+  padding: 16px;
+}
+.card{
+  background-color: #D1D5DE;
+  width: 350px;
+  margin: 10px auto;
+  padding: 16px;
+  border-radius: 2px;
+  text-align: center;
+  min-height: 350px;
+}
+input {
+  padding: 8px;
+  border: none;
+  border-radius: 2px;
+}
