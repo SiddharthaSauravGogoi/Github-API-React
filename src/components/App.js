@@ -23,7 +23,12 @@ class App extends React.Component {
         return fetch(`https://api.github.com/users/${username}/repos`)
             .then(response => response.json())
             .then(response => {
-                return response
+                if( response.message === "Not Found"){
+                    return alert("No user found")
+                }
+                else {
+                    return response
+                }
             })
     }
 
@@ -56,7 +61,7 @@ class App extends React.Component {
     User(user) {
         return (
             <div className="resultBadge">
-                <img src={user.avatar_url} height="150" />
+                <img src={user.avatar_url} height="150" alt="Not Found"/>
                 <p className="userInfo">
                     <strong>Username:</strong> <br />
                     {user.username}
